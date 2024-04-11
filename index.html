@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Viewer</title>
+</head>
+<body>
+    <h1>YouTube Transcript Viewer</h1>
+    <form action="/transcript" method="post">
+        <label for="video_url">Enter YouTube video URL:</label><br>
+        <input type="text" id="video_url" name="video_url"><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if transcript %}
+    <h2>Transcript:</h2>
+    <p>{{ transcript }}</p>
+    {% endif %}
+</body>
+</html>
